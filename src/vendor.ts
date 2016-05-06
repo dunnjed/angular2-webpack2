@@ -18,3 +18,7 @@ if (WEBPACK_ENV !== 'production') {
 
 // Angular 2 Deps
 import 'rxjs/Rx';
+
+//export let ol = require('../node_modules/openlayers/dist/ol');
+
+

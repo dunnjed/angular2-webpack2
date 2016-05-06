@@ -6,7 +6,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const config = {
   entry: {
     'vendor': './src/vendor',
-    'app': './src/bootstrap'
+    //'app': './src/bootstrap'
+    'main': './src/app/main'
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -22,6 +23,7 @@ const config = {
       { test: /\.html/, loader: 'html?minimize=false' },
       { test: /\.styl$/, loader: 'css!stylus' },
       { test: /\.css$/, loader: 'style!css' },
+      { test: /\.scss$/, loaders: ["style", "css", "sass"] },
       { test: /\.(gif|png|jpe?g)$/i, loader: 'file?name=dist/images/[name].[ext]' },
       { test: /\.woff2?$/, loader: 'url?name=dist/fonts/[name].[ext]&limit=10000&mimetype=application/font-woff' },
       { test: /\.(ttf|eot|svg)$/, loader: 'file?name=dist/fonts/[name].[ext]' }

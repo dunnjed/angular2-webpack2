@@ -1,4 +1,5 @@
 import {Component} from 'angular2/core';
+//import {ol} from '../vendor';
 
 @Component({
   selector: 'test',
@@ -6,6 +7,7 @@ import {Component} from 'angular2/core';
   styles: [require('./test.styl').toString()]
 })
 export class TestComponent {
-  public test: string = 'test';
+  public test: string = 'The test component';
   constructor() {}
 }
+
